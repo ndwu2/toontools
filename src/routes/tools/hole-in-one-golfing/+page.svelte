@@ -55,9 +55,14 @@
 </div>
 
 <footer class="source">
+	<ul>
+		<li>Straight = up-arrow.</li>
+		<li>Aim is one tap of an arrow key.</li>
+	</ul>
 	<p>
 		This work is based on the original
-		<a href={asset('/resources/ttgolf.pdf')} target="_blank" rel="noopener">Toontown Golf Chart (PDF)</a>.
+		<a href={asset('/resources/ttgolf.pdf')} target="_blank" rel="noopener">Toontown Golf Chart (PDF)</a>
+		by spidermom.
 	</p>
 </footer>
 

@@ -20,3 +20,9 @@ npm run build   # build the static site into build/
 ```
 
 Pushing to `main` deploys to GitHub Pages via `.github/workflows/deploy.yml`.
+
+## License
+
+The code is released under the [MIT License](LICENSE).
+
+ToonTools is a fan project and is not affiliated with Disney or Toontown Rewritten. Toontown and its assets are property of The Walt Disney Company. Game assets and third-party guides (the sound combo charts and golf chart) remain the property of their respective owners and are credited on the pages where they appear.
