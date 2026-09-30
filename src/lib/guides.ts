@@ -17,7 +17,8 @@ export const guideSections: GuideSection[] = [
 		title: 'Getting Started',
 		guides: [
 			{ name: 'General Combat Strategy and Philosophy', path: '/guides/combat-strategy/' },
-			{ name: 'Gag Training + Organic', path: '/guides/gag-training/' }
+			{ name: 'Gag Training, Progression, and Organic', path: '/guides/gag-training/' },
+			{ name: 'Common Terminology', path: '/guides/common-terminology/' }
 		]
 	},
 	{

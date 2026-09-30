@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>ToonTools · Toontown</title>
-	<meta name="description" content="Free Toontown Rewritten tools." />
+	<meta name="description" content="Tools and guides for Toontown." />
 </svelte:head>
 
 <h1>ToonTools</h1>
