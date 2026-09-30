@@ -27,7 +27,7 @@
 			As a former new player, I think it'd be nice to have the general strategies and information in one place for easy reading.
 		</p>
 		<p>
-			Thanks for reading my blurb, this site is fairly informal, it's goal is to deliver information in a concise manner.
+			Thanks for reading my blurb, this site is fairly informal, its goal is to deliver information in a concise manner.
 			If you enjoy the tool and want to support my work, you can
 			<a href="https://ko-fi.com/ndwu2" target="_blank" rel="noopener noreferrer">buy me a coffee</a>!
 		</p>
