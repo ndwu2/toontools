@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import ToolsMenu from '$lib/components/ToolsMenu.svelte';
+	import DropdownMenu from '$lib/components/DropdownMenu.svelte';
+	import { tools } from '$lib/tools';
 </script>
 
 <svelte:head>
@@ -12,10 +13,11 @@
 
 <div class="boxes">
 	<div class="box tools">
-		<ToolsMenu variant="box" />
+		<DropdownMenu label="Tools" href="/tools/" items={tools} variant="box" />
 	</div>
 	<a class="box resources" href={resolve('/resources/')}>Resources</a>
 	<a class="box about" href={resolve('/about/')}>About</a>
+	<a class="box guides" href={resolve('/guides/')}>Guides</a>
 </div>
 
 <style>
@@ -54,11 +56,21 @@
 
 	.tools {
 		background: var(--box);
+		color: var(--on-box);
 	}
 	.resources {
 		background: var(--box-2);
+		color: var(--on-box);
 	}
 	.about {
 		background: var(--box-3);
+		color: var(--on-box);
+	}
+	/* Full-width bar under the other boxes. */
+	a.guides {
+		grid-column: 1 / -1;
+		min-height: 90px;
+		background: var(--box-4);
+		color: var(--on-box);
 	}
 </style>

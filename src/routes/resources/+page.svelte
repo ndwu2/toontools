@@ -44,7 +44,7 @@
 	}
 
 	.card {
-		background: #fff;
+		background: var(--surface);
 		border: 4px solid var(--ink);
 		border-radius: 20px;
 		box-shadow: var(--shadow);
@@ -70,6 +70,7 @@
 		cursor: pointer;
 		padding: 0.35rem 1rem;
 		background: var(--box);
+		color: var(--on-box);
 		border: 3px solid var(--ink);
 		border-radius: 10px;
 		box-shadow: 3px 3px 0 var(--ink);

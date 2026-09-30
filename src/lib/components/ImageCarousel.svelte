@@ -64,7 +64,7 @@
 	}
 
 	.thumb:focus-visible img {
-		outline: 3px dashed var(--ink);
+		outline: 3px dashed var(--text);
 		outline-offset: 3px;
 	}
 
@@ -95,7 +95,7 @@
 		cursor: pointer;
 		padding: 0.25rem 0.9rem;
 		background: var(--box);
-		color: var(--ink);
+		color: var(--on-box);
 		border: 3px solid var(--ink);
 		border-radius: 10px;
 		box-shadow: 3px 3px 0 var(--ink);
@@ -126,7 +126,7 @@
 	}
 
 	.controls span {
-		color: var(--ink);
+		color: var(--text);
 	}
 
 	.empty {

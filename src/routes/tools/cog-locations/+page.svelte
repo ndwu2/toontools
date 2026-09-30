@@ -1,7 +1,15 @@
 <script lang="ts">
 	import { asset } from '$app/paths';
 	import { departments } from '$lib/levelTables';
-	import { canSpawn, cogs, playgrounds, streets, type Playground } from '$lib/cogLocations';
+	import {
+		canAppear,
+		canSpawn,
+		cogs,
+		hqLocations,
+		playgrounds,
+		streets,
+		type Playground
+	} from '$lib/cogLocations';
 	import { SvelteSet } from 'svelte/reactivity';
 
 	// Empty set means every playground is shown.
@@ -29,6 +37,9 @@
 					.filter((g) => g.streets.length)
 			: []
 	);
+	const cogDept = $derived(cog && departments.find((d) => d.id === cog.dept)!);
+	// Headquarters spots for the picked cog; not affected by the playground filter.
+	const cogHq = $derived(cog ? hqLocations.filter((l) => canAppear(cog, l)) : []);
 </script>
 
 <svelte:head>
@@ -111,7 +122,7 @@
 		{:else if cogGroups.length}
 			<table>
 				<thead>
-					<tr><th>Street</th><th>Levels</th><th>{departments.find((d) => d.id === cog.dept)!.name} %</th></tr>
+					<tr><th>Street</th><th>Levels</th><th>{cogDept!.name} %</th></tr>
 				</thead>
 				{#each cogGroups as g (g.playground.id)}
 					<tbody>
@@ -129,15 +140,33 @@
 		{:else}
 			<p>Doesn't roam any street in the selected playgrounds.</p>
 		{/if}
+
+		{#if cogHq.length}
+			<h4>{cogDept!.name} Headquarters</h4>
+			<table class="hq">
+				<thead>
+					<tr><th>Location</th><th>Type</th><th>Levels</th></tr>
+				</thead>
+				<tbody>
+					{#each cogHq as l (l.name)}
+						<tr>
+							<th scope="row">{l.name}</th>
+							<td>{l.kind}</td>
+							<td>{l.minLevel}–{l.maxLevel}</td>
+						</tr>
+					{/each}
+				</tbody>
+			</table>
+		{/if}
 	{/if}
 </section>
 
 <style>
 	button {
 		font: inherit;
-		color: var(--ink);
+		color: var(--text);
 		cursor: pointer;
-		background: #fff;
+		background: var(--surface);
 		border: 3px solid var(--ink);
 		border-radius: 12px;
 		box-shadow: 4px 4px 0 var(--ink);
@@ -145,6 +174,7 @@
 
 	button[aria-pressed='true'] {
 		background: var(--box);
+		color: var(--on-box);
 		transform: translate(2px, 2px);
 		box-shadow: 2px 2px 0 var(--ink);
 	}
@@ -178,7 +208,7 @@
 
 	table {
 		border-collapse: collapse;
-		background: #fff;
+		background: var(--surface);
 		border: 3px solid var(--ink);
 		box-shadow: var(--shadow);
 	}
@@ -195,7 +225,7 @@
 	}
 
 	thead th {
-		background: #f3eee0;
+		background: var(--surface-2);
 		font-size: 0.85rem;
 		vertical-align: bottom;
 	}
@@ -213,6 +243,11 @@
 		white-space: nowrap;
 	}
 
+	/* Long location names wrap so the table fits on phones. */
+	.hq tbody th {
+		white-space: normal;
+	}
+
 	.pg-row th {
 		background: var(--bg);
 		font-weight: bold;
@@ -220,11 +255,11 @@
 
 	/* Cell tint scales with the percentage. */
 	.pct {
-		background: color-mix(in srgb, var(--box-3) var(--pct), #fff);
+		background: color-mix(in srgb, var(--tint) var(--pct), var(--surface));
 	}
 
 	.pct.zero {
-		color: #999;
+		color: var(--muted);
 	}
 
 	.note {
@@ -266,7 +301,8 @@
 		transform: translate(1px, 1px);
 	}
 
-	h3 {
+	h3,
+	h4 {
 		margin: 1.5rem 0 0.75rem;
 	}
 

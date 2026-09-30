@@ -27,7 +27,7 @@ export const courses: Course[] = [
 				position: 'Center',
 				aim: 'straight',
 				strength: '72',
-				notes: 'Hole in one!! confirmed'
+				notes: ''
 			},
 			{
 				name: 'Down the Hatch',
@@ -41,33 +41,33 @@ export const courses: Course[] = [
 				position: 'Center',
 				aim: 'straight',
 				strength: '52-55',
-				notes: 'Hit up arrow first. Hole in One'
+				notes: 'Hit up arrow first'
 			},
 			{
 				name: 'Hole on the Range',
 				position: 'Center',
 				aim: 'straight',
 				strength: '68',
-				notes: 'Hole in One'
+				notes: ''
 			},
 			{
 				name: 'Holey Mackerel!',
 				position: 'Center',
 				aim: 'straight',
 				strength: '44-46',
-				notes: 'Hole in One'
+				notes: ''
 			},
 			{
 				name: 'Hot Links',
 				position: 'Right',
 				aim: 'straight',
 				strength: '82',
-				notes: 'Hole in One (be sure to hit up arrow)'
+				notes: 'Be sure to hit up arrow'
 			},
 			{
 				name: 'One Little Birdie',
 				position: 'Left',
-				aim: '32 right',
+				aim: 'right 32',
 				strength: '77',
 				notes: ''
 			},
@@ -76,26 +76,26 @@ export const courses: Course[] = [
 				position: 'Center',
 				aim: 'straight',
 				strength: '70-75',
-				notes: 'Hole in one (got one on 68 and 89)'
+				notes: 'Also works on 68 and 89'
 			},
 			{
 				name: 'Seeing Green',
 				position: 'Center',
 				aim: 'straight',
 				strength: '54-57',
-				notes: 'Hole in one!! confirmed'
+				notes: ''
 			},
 			{
 				name: 'Swing Time',
 				position: 'Center',
-				aim: '16 right',
+				aim: 'right 16',
 				strength: '55',
 				notes: ''
 			},
 			{
 				name: 'Swing-A-Long',
 				position: 'Center',
-				aim: '11 right',
+				aim: 'right 11',
 				strength: '78',
 				notes: ''
 			}
@@ -117,14 +117,14 @@ export const courses: Course[] = [
 			{
 				name: 'Bogey Nights-2',
 				position: 'Center',
-				aim: '36 left',
+				aim: 'left 36',
 				strength: '75',
 				notes: 'Aim when block just beginning to move left'
 			},
 			{
 				name: 'Down the Hatch-2',
 				position: 'Left',
-				aim: '11 right',
+				aim: 'right 11',
 				strength: '82',
 				notes: ''
 			},
@@ -133,12 +133,12 @@ export const courses: Course[] = [
 				position: 'Left',
 				aim: 'straight',
 				strength: '54',
-				notes: 'Hole in One. hit as soon as block begins to move left'
+				notes: 'Hit as soon as block begins to move left'
 			},
 			{
 				name: 'Holey Mackerel!-2',
 				position: 'Center',
-				aim: '30 right',
+				aim: 'right 30',
 				strength: '43',
 				notes: ''
 			},
@@ -147,12 +147,12 @@ export const courses: Course[] = [
 				position: 'Right',
 				aim: 'Up arrow',
 				strength: '81',
-				notes: 'Hole in One'
+				notes: ''
 			},
 			{
 				name: 'No Putts About It',
 				position: 'Left',
-				aim: '7 right',
+				aim: 'right 7',
 				strength: '100',
 				notes: '33 to hole if you get stuck on edge'
 			},
@@ -161,19 +161,19 @@ export const courses: Course[] = [
 				position: 'Center',
 				aim: 'straight',
 				strength: '70-75',
-				notes: 'Hole in one (got one on 68 and 89)'
+				notes: 'Also works on 68 and 89'
 			},
 			{
 				name: 'Rock and Roll In',
 				position: 'Center',
-				aim: '7 right',
+				aim: 'right 7',
 				strength: '78',
 				notes: ''
 			},
 			{
 				name: 'Rock and Roll In-2',
 				position: 'Left',
-				aim: '15 right',
+				aim: 'right 15',
 				strength: '85',
 				notes: ''
 			},
@@ -189,12 +189,12 @@ export const courses: Course[] = [
 				position: 'Center',
 				aim: 'straight',
 				strength: '54-57',
-				notes: 'Hole in one!! confirmed'
+				notes: ''
 			},
 			{
 				name: 'Swing Time-2',
 				position: 'Center',
-				aim: '17 right',
+				aim: 'right 17',
 				strength: '50',
 				notes: 'Hit when block starts to pass towards right'
 			},
@@ -203,7 +203,7 @@ export const courses: Course[] = [
 				position: 'Center',
 				aim: 'straight',
 				strength: '69-72',
-				notes: '36 to hole from edge. Hole in One confirmed'
+				notes: '36 to hole from edge'
 			}
 		]
 	},
@@ -215,14 +215,14 @@ export const courses: Course[] = [
 			{
 				name: 'Afternoon Tee-2',
 				position: 'Right',
-				aim: '1 left',
+				aim: 'left 1',
 				strength: '83',
-				notes: 'Hit when block is in middle moving left. Hole in one'
+				notes: 'Hit when block is in middle moving left'
 			},
 			{
 				name: 'At the Drive In-2',
 				position: 'Left',
-				aim: '37 right',
+				aim: 'right 37',
 				strength: '65',
 				notes: ''
 			},
@@ -243,7 +243,7 @@ export const courses: Course[] = [
 			{
 				name: 'One Little Birdie-2',
 				position: 'Left',
-				aim: '32 right',
+				aim: 'right 32',
 				strength: '83',
 				notes: 'Hit when block starting to move towards middle either way'
 			},
@@ -252,12 +252,12 @@ export const courses: Course[] = [
 				position: 'Center',
 				aim: 'straight',
 				strength: '70-75',
-				notes: 'When block just over second hump (left straight 70 hole in one)'
+				notes: 'When block just over second hump (left straight 70 also works)'
 			},
 			{
 				name: 'Second Wind-2',
 				position: 'Right',
-				aim: '18 left',
+				aim: 'left 18',
 				strength: '80',
 				notes: '52 from back block'
 			},
@@ -285,14 +285,14 @@ export const courses: Course[] = [
 			{
 				name: 'Whole in Won',
 				position: 'Center',
-				aim: '2 right',
+				aim: 'right 2',
 				strength: '74',
-				notes: 'Hole in one'
+				notes: ''
 			},
 			{
 				name: 'Whole in Won-2',
 				position: 'Center',
-				aim: '2 right',
+				aim: 'right 2',
 				strength: '73',
 				notes: 'Hit when block just starts to move towards you'
 			}

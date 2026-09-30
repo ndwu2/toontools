@@ -50,7 +50,7 @@
 		{:else}
 			<table class="tiers">
 				<thead>
-					<tr><th colspan="6">Normal {current.name} Cog Disguise</th></tr>
+					<tr><th colspan="6">Normal {current.name} Cog disguise</th></tr>
 				</thead>
 				<tbody>
 					{#each current.tiers as tier (tier.cog)}
@@ -84,10 +84,10 @@
 	button {
 		font: inherit;
 		font-size: 1.15rem;
-		color: var(--ink);
+		color: var(--text);
 		cursor: pointer;
 		padding: 0.75rem 0.5rem;
-		background: #fff;
+		background: var(--surface);
 		border: 3px solid var(--ink);
 		border-radius: 12px;
 		box-shadow: 4px 4px 0 var(--ink);
@@ -96,6 +96,7 @@
 	button[aria-selected='true'],
 	.v2[aria-pressed='true'] {
 		background: var(--box);
+		color: var(--on-box);
 		transform: translate(2px, 2px);
 		box-shadow: 2px 2px 0 var(--ink);
 	}
@@ -149,7 +150,7 @@
 
 	.tiers {
 		border-collapse: collapse;
-		background: #fff;
+		background: var(--surface);
 		border: 3px solid var(--ink);
 		box-shadow: var(--shadow);
 	}
@@ -163,7 +164,7 @@
 
 	.tiers thead th,
 	.tiers .levels th:not(.cog) {
-		background: #f3eee0;
+		background: var(--surface-2);
 	}
 
 	.tiers .cog {

@@ -1,10 +1,32 @@
 :root {
 	--bg: #fff8e7;
+	/* Borders and shadows. */
 	--ink: #1a1a1a;
+	--text: #1a1a1a;
+	--muted: #999;
+	/* Cards, tables and buttons. */
+	--surface: #fff;
+	--surface-2: #f3eee0;
 	--box: #f3ec6f;
 	--box-2: #ef958e;
 	--box-3: #95dfa4;
+	--box-4: #8fc4ec;
+	/* Text on the --box colors, which stay pastel in both themes. */
+	--on-box: #1a1a1a;
+	/* Percentage cell tint in the cog locations table. */
+	--tint: var(--box-3);
 	--shadow: 6px 6px 0 var(--ink);
+}
+
+/* Set on <html> by ThemeToggle (and by the inline script in app.html before first paint). */
+:root[data-theme='dark'] {
+	color-scheme: dark;
+	--bg: #292929;
+	--text: #fff8e7;
+	--muted: #8a8478;
+	--surface: #232323;
+	--surface-2: #303030;
+	--tint: #2f7a45;
 }
 
 * {
@@ -15,7 +37,7 @@ body {
 	margin: 0;
 	min-height: 100vh;
 	background: var(--bg);
-	color: var(--ink);
+	color: var(--text);
 	font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
 }
 

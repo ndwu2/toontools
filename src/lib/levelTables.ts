@@ -62,7 +62,7 @@ export const departments: Department[] = [
 			]
 		},
 		v2: {
-			title: 'Upgraded Bossbot Cog Disguise',
+			title: 'Upgraded Bossbot Cog disguise',
 			start: 8,
 			highlights: [],
 			// prettier-ignore
@@ -111,7 +111,7 @@ export const departments: Department[] = [
 			]
 		},
 		v2: {
-			title: 'Upgraded Lawbot Cog Disguise',
+			title: 'Upgraded Lawbot Cog disguise',
 			start: 8,
 			highlights: [],
 			// prettier-ignore
@@ -160,7 +160,7 @@ export const departments: Department[] = [
 			]
 		},
 		v2: {
-			title: 'Upgraded Cashbot Cog Disguise',
+			title: 'Upgraded Cashbot Cog disguise',
 			start: 8,
 			highlights: [],
 			// prettier-ignore
@@ -209,7 +209,7 @@ export const departments: Department[] = [
 			]
 		},
 		v2: {
-			title: 'Upgraded Sellbot Cog Disguise',
+			title: 'Upgraded Sellbot Cog disguise',
 			start: 8,
 			highlights: [],
 			// prettier-ignore

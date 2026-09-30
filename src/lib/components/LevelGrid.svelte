@@ -41,7 +41,7 @@
 <style>
 	table {
 		border-collapse: collapse;
-		background: #fff;
+		background: var(--surface);
 		border: 3px solid var(--ink);
 		box-shadow: var(--shadow);
 	}
@@ -55,11 +55,12 @@
 
 	thead th,
 	.levels th {
-		background: #f3eee0;
+		background: var(--surface-2);
 	}
 
 	.levels th.hl,
 	.hl {
 		background: var(--box);
+		color: var(--on-box);
 	}
 </style>

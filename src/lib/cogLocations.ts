@@ -19,6 +19,15 @@ export type Street = {
 	chance: Record<DeptId, number>;
 };
 
+// A place inside a Cog headquarters. Only that department's cogs appear there.
+export type HqLocation = {
+	name: string;
+	hq: DeptId;
+	kind: 'Area' | 'Facility' | 'Boss';
+	minLevel: number;
+	maxLevel: number;
+};
+
 export type Cog = {
 	name: string;
 	dept: DeptId;
@@ -73,6 +82,35 @@ export const streets: Street[] = [
 	street('ddl', 'Pajama Place', 'Cashbot Headquarters', [6, 9], [5, 5, 85, 5])
 ];
 
+const hq = (
+	hq: DeptId,
+	kind: HqLocation['kind'],
+	name: string,
+	[minLevel, maxLevel]: [number, number]
+): HqLocation => ({ name, hq, kind, minLevel, maxLevel });
+
+// TODO: scaffold, double check. Level ranges are from the Toontown Rewritten wiki pages for each
+// headquarters and facility. The wiki disagrees with itself on the Steel Factory minimum (8 on the
+// Sellbot Headquarters page, 9 on the Sellbot Factory page); the facility page is used here.
+export const hqLocations: HqLocation[] = [
+	hq('sellbot', 'Area', 'Sellbot HQ Courtyard', [4, 6]),
+	hq('sellbot', 'Facility', 'Scrap Factory', [3, 7]),
+	hq('sellbot', 'Facility', 'Steel Factory', [9, 12]),
+	hq('sellbot', 'Boss', 'VP', [1, 12]),
+	hq('cashbot', 'Area', 'Cashbot HQ Train Yard', [7, 9]),
+	hq('cashbot', 'Facility', 'Coin Mint', [7, 11]),
+	hq('cashbot', 'Facility', 'Bullion Mint', [8, 12]),
+	hq('cashbot', 'Boss', 'CFO', [1, 12]),
+	hq('lawbot', 'Area', 'Lawbot HQ Courtyard', [8, 10]),
+	hq('lawbot', 'Facility', 'DA Offices: Junior Wing', [8, 11]),
+	hq('lawbot', 'Facility', 'DA Offices: Senior Wing', [8, 13]),
+	hq('lawbot', 'Boss', 'CJ', [8, 13]),
+	hq('bossbot', 'Area', 'Bossbot HQ Courtyard', [8, 10]),
+	hq('bossbot', 'Facility', 'The First Fairway', [9, 13]),
+	hq('bossbot', 'Facility', 'The Final Fringe', [9, 13]),
+	hq('bossbot', 'Boss', 'CEO', [9, 14])
+];
+
 // Each cog spawns at 5 levels starting from its tier, same as its suit table row.
 export const cogs: Cog[] = departments.flatMap((d) =>
 	d.tiers.map((t, i) => ({
@@ -93,4 +131,10 @@ export function canSpawn(cog: Cog, s: Street): boolean {
 		cog.minLevel <= s.maxLevel &&
 		cog.maxLevel >= s.minLevel
 	);
+}
+
+// TODO: double check. Assumes a cog can show up anywhere in its own headquarters where its levels
+// overlap the location's, including the top 2 cogs that never roam streets.
+export function canAppear(cog: Cog, l: HqLocation): boolean {
+	return cog.dept === l.hq && cog.minLevel <= l.maxLevel && cog.maxLevel >= l.minLevel;
 }

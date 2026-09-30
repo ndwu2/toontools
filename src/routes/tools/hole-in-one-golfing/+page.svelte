@@ -38,7 +38,7 @@
 				<tr>
 					<th>Hole Name</th>
 					<th>Position</th>
-					<th>Aim</th>
+					<th>Aim + Tap</th>
 					<th>Strength</th>
 					<th>Notes</th>
 				</tr>
@@ -81,10 +81,10 @@
 	button {
 		font: inherit;
 		font-size: 1.15rem;
-		color: var(--ink);
+		color: var(--text);
 		cursor: pointer;
 		padding: 0.75rem 0.5rem;
-		background: #fff;
+		background: var(--surface);
 		border: 3px solid var(--ink);
 		border-radius: 12px;
 		box-shadow: 4px 4px 0 var(--ink);
@@ -97,14 +97,17 @@
 
 	.easy[aria-selected='true'] {
 		background: var(--box-3);
+		color: var(--on-box);
 	}
 
 	.medium[aria-selected='true'] {
 		background: var(--box);
+		color: var(--on-box);
 	}
 
 	.hard[aria-selected='true'] {
 		background: var(--box-2);
+		color: var(--on-box);
 	}
 
 	.scroll {
@@ -115,7 +118,7 @@
 
 	table {
 		border-collapse: collapse;
-		background: #fff;
+		background: var(--surface);
 		border: 3px solid var(--ink);
 		box-shadow: var(--shadow);
 	}
@@ -128,7 +131,7 @@
 	}
 
 	thead th {
-		background: #f3eee0;
+		background: var(--surface-2);
 	}
 
 	tbody th {
