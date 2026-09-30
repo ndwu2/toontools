@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>About · ToonTools</title>
+	<title>About · Toontown · ToonTools</title>
 </svelte:head>
 
 <h1>About</h1>

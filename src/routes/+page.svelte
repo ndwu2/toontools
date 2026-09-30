@@ -3,6 +3,11 @@
 	import ToolsMenu from '$lib/components/ToolsMenu.svelte';
 </script>
 
+<svelte:head>
+	<title>ToonTools · Toontown</title>
+	<meta name="description" content="Free Toontown Rewritten tools." />
+</svelte:head>
+
 <h1>ToonTools</h1>
 
 <div class="boxes">

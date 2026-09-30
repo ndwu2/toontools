@@ -32,7 +32,11 @@
 </script>
 
 <svelte:head>
-	<title>Cog Locations · ToonTools</title>
+	<title>Cog Locations · Toontown · ToonTools</title>
+	<meta
+		name="description"
+		content="Toontown Rewritten cog spawn percentages for every street, plus a lookup to find which streets each cog roams."
+	/>
 </svelte:head>
 
 <h1>Cog Locations</h1>

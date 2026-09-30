@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Resources · ToonTools</title>
+	<title>Resources · Toontown · ToonTools</title>
 </svelte:head>
 
 <h1>Resources</h1>

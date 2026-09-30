@@ -7,7 +7,11 @@
 </script>
 
 <svelte:head>
-	<title>Hole-in-One Golfing · ToonTools</title>
+	<title>Hole-in-One Golfing · Toontown · ToonTools</title>
+	<meta
+		name="description"
+		content="Toontown Rewritten hole-in-one golf guide: position, aim and strength for every hole on the Easy, Medium and Hard courses."
+	/>
 </svelte:head>
 
 <h1>Hole-in-One Golfing</h1>

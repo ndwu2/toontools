@@ -10,7 +10,11 @@
 </script>
 
 <svelte:head>
-	<title>Cog Suit Level Tables · ToonTools</title>
+	<title>Cog Suit Level Tables · Toontown · ToonTools</title>
+	<meta
+		name="description"
+		content="Toontown Rewritten cog suit promotion requirements for every Sellbot, Cashbot, Lawbot and Bossbot disguise level, including v2.0."
+	/>
 </svelte:head>
 
 <h1>Cog Suit Level Tables</h1>
